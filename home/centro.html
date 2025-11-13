@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniPass — Selecciona centro</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="../css/estilosdatos.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a href="../home/index.html">
+      <img src="../assets/logo_Unipass.jpg" alt="UniPass Logo" class="image">
+    </a>
+    <div class="ms-auto">
+      <a class="nav-link btn btn-cta ms-3" href="../Registro_Usuario/login.html">Iniciar sesión</a>
+    </div>
+  </div>
+</nav>
+
+<div class="steps-container d-flex justify-content-center mb-4">
+  <div class="step-item">
+    <div class="step-circle">1</div>
+    <div class="step-label">Datos Generales</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">2</div>
+    <div class="step-label">Contacto</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle active">3</div>
+    <div class="step-label">Centro</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">4</div>
+    <div class="step-label">Calendario</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">5</div>
+    <div class="step-label">Confirmar</div>
+  </div>
+</div>
+
+
+
+
+  <div class="container my-5">
+    <div class="form-card mx-auto p-4">
+      <h2 class="title mb-4">Centro de Atención</h2>
+      <form>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="ciudad" class="form-label">Ciudad</label>
+            <select class="form-select" id="ciudad">
+              <option selected disabled>Selecciona ciudad</option>
+              <option>Culiacán</option>
+              <option>Mazatlán</option>
+              <option>Los Mochis</option>
+              <option>Guasave</option>
+              <option>Guamúchil</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="centro" class="form-label">Centro de atención</label>
+            <select class="form-select" id="centro">
+              <option selected disabled>Selecciona centro</option>
+              <option>ITSE</option>
+              <option>ISJU</option>
+              <option>Palacio de Gobierno</option>
+            </select>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="tramite" class="form-label">Tipo de trámite</label>
+          <select class="form-select" id="tramite">
+            <option selected disabled>Elige trámite</option>
+            <option>Nueva tarjeta</option>
+            <option>Reposición</option>
+            <option>Reactivación</option>
+          </select>
+        </div>
+        <!-- Aquí puedes agregar Cards Bootstrap para mostrar detalles de cada centro si lo deseas -->
+        <div class="d-flex justify-content-between">
+          <a href="../home/contacto.html" class="btn btn-primary-light">Anterior</a>
+          <a href="../home/confirmacion.html" class="btn btn-cta">Siguiente</a>
+          
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

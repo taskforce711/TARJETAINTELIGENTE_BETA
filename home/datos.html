@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniPass — Datos Generales</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/estilosdatos.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a href="../home/index.html">
+      <img src="../assets/logo_Unipass.jpg" alt="UniPass Logo" class="image">
+    </a>
+    <div class="ms-auto">
+      <a class="nav-link btn btn-cta ms-3" href="../Registro_Usuario/login.html">Iniciar sesión</a>
+    </div>
+  </div>
+</nav>
+
+<div class="steps-container d-flex justify-content-center mb-4">
+  <div class="step-item">
+   <div class="step-circle active">1</div>
+    <div class="step-label">Datos Generales</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">2</div>
+    <div class="step-label">Contacto</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">3</div>
+    <div class="step-label">Centro</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">4</div>
+    <div class="step-label">Calendario</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">5</div>
+    <div class="step-label">Confirmar</div>
+  </div>
+</div>
+
+
+
+
+  <div class="container my-5">
+    <div class="form-card mx-auto p-4">
+      <h2 class="title mb-4">Datos Generales</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre(s)</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre del alumno">
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="apPaterno" class="form-label">Apellido Paterno</label>
+            <input type="text" class="form-control" id="apPaterno" placeholder="Apellido paterno">
+          </div>
+          <div class="col">
+            <label for="apMaterno" class="form-label">Apellido Materno</label>
+            <input type="text" class="form-control" id="apMaterno" placeholder="Apellido materno">
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="curp" class="form-label">CURP</label>
+          <input type="text" class="form-control" id="curp" placeholder="CURP del alumno">
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label for="fechaNac" class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-control" id="fechaNac">
+          </div>
+          <div class="col">
+            <label for="sexo" class="form-label">Sexo</label>
+            <select class="form-select" id="sexo">
+              <option selected disabled>Selecciona</option>
+              <option>Masculino</option>
+              <option>Femenino</option>
+              <option>Prefiero no decirlo</option>
+            </select>
+          </div>
+        </div>
+        <div class="d-flex justify-content-end">
+          <a href="../home/contacto.html" class="btn btn-cta">Siguiente</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

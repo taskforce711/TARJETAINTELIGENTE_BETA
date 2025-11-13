@@ -1,0 +1,48 @@
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo de la pagina principal de registro */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #1b325f, #ffffff);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Contenedor para centrar el login */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+/* Tarjeta de login */
+.login-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Inputs */
+.form-control {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Botón */
+.btn-primary {
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* Texto */
+.text-muted {
+  font-size: 0.9rem;
+}

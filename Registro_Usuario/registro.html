@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro Unipass</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <div class="container mt-5 mb-5">
+        <div class="card shadow">
+            <div class="card-header bg-warning text-white">
+            <h4 class="mb-0">Registro — UniPass</h4>
+            </div>
+            <div class="card-body">
+
+                <!-- Datos del Estudiante -->
+                <h5 class="mb-3">Datos del Estudiante</h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                    <label class="form-label">Nombre completo</label>
+                    <input type="text" class="form-control" placeholder="Ingresa nombre completo">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">CURP</label>
+                    <input type="text" class="form-control" placeholder="CURP">
+                    </div>
+                    <div class="col-md-4">
+                    <label class="form-label">Fecha de nacimiento</label>
+                    <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-4">
+                    <label class="form-label">Sexo</label>
+                    <select class="form-select">
+                        <option selected disabled>Selecciona</option>
+                        <option>Femenino</option>
+                        <option>Masculino</option>
+                    </select>
+                    </div>
+                    <div class="col-md-4">
+                    <label class="form-label">Grado escolar</label>
+                    <input type="text" class="form-control" placeholder="Ej. 2° de secundaria">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Escuela</label>
+                    <input type="text" class="form-control" placeholder="Nombre de la escuela">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Matrícula escolar</label>
+                    <input type="text" class="form-control" placeholder="Número de matrícula">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Fotografía del estudiante</label>
+                    <input type="file" class="form-control">
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Documentación -->
+                <h5 class="mb-3">Documentación Adjunta</h5>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                    <label class="form-label">Comprobante de inscripción</label>
+                    <input type="file" class="form-control">
+                    </div> <div class="col-md-6">
+                    <label class="form-label">Constancia</label>
+                    <input type="file" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Comprobante de domicilio</label>
+                    <input type="file" class="form-control">
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Consentimientos -->
+                <h5 class="mb-3">Consentimientos</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="consent1">
+                    <label class="form-check-label" for="consent1">
+                    Confirmo que la información proporcionada es verídica
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="consent2">
+                    <label class="form-check-label" for="consent2">
+                    Acepto el uso de mis datos conforme a la política de privacidad
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="consent3">
+                    <label class="form-check-label" for="consent3">
+                    Autorizo el uso de la tarjeta únicamente para fines escolares
+                    </label>
+                </div>
+
+                <div class="mt-4">
+                    <button type="submit" class="btn btn-primary">Guardar y Enviar</button>
+                    <button type="reset" class="btn btn-secondary">Cancelar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

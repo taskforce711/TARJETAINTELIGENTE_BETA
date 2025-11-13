@@ -1,0 +1,46 @@
+
+    :root{
+      --primary:#1b325f;
+      --primary-light:#3a89c9;
+      --bg-soft:#e9f2f9;
+      --accent:#9cc4e4;
+      --cta:#f26c4f;
+    }
+    /*CSS index*/
+    body{ background: var(--bg-soft); }
+    .navbar{ background: var(--primary); }
+    .navbar .nav-link, .navbar-brand{ color:#fff !important; }
+    .image{
+      width: 130px;
+      height: auto;
+      border-radius: 8px;
+
+    }
+    .btn-cta{ background: var(--cta); border-color: var(--cta); color:#fff; }
+    .section-title{ color: var(--primary); }
+    .location-card{
+      background-color: whitesmoke;
+      border-radius: 5px;
+      max-width: 200px;
+      margin: auto;
+      margin-top: 3%;
+      border-top: 5px solid var(--primary);
+    }
+    .footer{ background: var(--primary); color:#fff; }
+
+    /*CSS login*/
+    body{ background: var(--bg-soft); }
+    .login-card{
+      max-width: 400px;
+      margin: auto;
+      margin-top: 8%;
+      border-top: 5px solid var(--primary);
+    }
+    .btn-primary{ background: var(--primary); border-color: var(--primary); }
+    .btn-primary:hover{ background: var(--primary-light); border-color: var(--primary-light); }
+    .link-cta{ color: var(--cta); text-decoration: none; }
+    .link-cta:hover{ text-decoration: underline; }
+  
+  
+
+    

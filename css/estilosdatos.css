@@ -1,0 +1,106 @@
+:root {
+  --primary: #1b325f;
+  --primary-light: #3a89c9;
+  --bg-soft: #e9f2f9;
+  --accent: #9cc4e4;
+  --cta: #f26c4f;
+}
+
+body {
+  background: var(--bg-soft);
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 36px 0 rgba(27,50,95,0.09);
+  max-width: 540px;
+}
+
+.title {
+  color: var(--primary);
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-cta {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-cta:hover {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+.btn-primary-light {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-primary-light:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.form-label {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 6px 0 var(--accent);
+}
+
+
+
+.steps-container {
+  gap: 8px;
+  align-items: center;
+}
+.step-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 60px;
+}
+.step-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background 0.2s, color 0.2s;
+}
+.step-circle.active {
+  background: var(--cta);
+  border: 2px solid var(--cta);
+  color: #fff;
+}
+.step-line {
+  flex: 1 0 14px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin: 0 4px;
+}
+.step-label {
+  font-size: 0.85rem;
+  color: var(--primary-light);
+  margin-top: 6px;
+  text-align: center;
+  width: max-content;
+}
