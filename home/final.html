@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UniPass — Comprobante Digital</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a href="../home/index.html">
+      <img src="../assets/logo_Unipass.jpg" alt="UniPass Logo" class="image">
+    </a>
+    <div class="ms-auto">
+      <a class="nav-link btn btn-cta ms-3" href="../Registro_Usuario/login.html">Iniciar sesión</a>
+    </div>
+  </div>
+</nav>
+
+<div class="steps-container d-flex justify-content-center mb-4">
+  <div class="step-item">
+    <div class="step-circle">1</div>
+    <div class="step-label">Datos Generales</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">2</div>
+    <div class="step-label">Contacto</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">3</div>
+    <div class="step-label">Centro</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+    <div class="step-circle">4</div>
+    <div class="step-label">Calendario</div>
+  </div>
+  <div class="step-line"></div>
+  <div class="step-item">
+   <div class="step-circle active">5</div>
+    <div class="step-label">Confirmar</div>
+  </div>
+</div>
+
+<h2 class="title mb-4">Comprobante Digital</h2>
+<div class="mb-3">
+  <p><strong>Nombre(s):</strong> NOMBRE DEL ESTUDIANTE</p>
+  <p><strong>Apellido paterno:</strong> APELLIDO PATERNO</p>
+  <p><strong>Apellido materno:</strong> APELLIDO MATERNO</p>
+  <p><strong>CURP:</strong> CURP DEL ESTUDIANTE</p>
+  <p><strong>Fecha de nacimiento:</strong> FECHA DE NACIMIENTO</p>
+  <p><strong>Sexo:</strong> SEXO</p>
+  <p><strong>Nombre de la institución:</strong> INSTITUCIÓN</p>
+  <p><strong>Grado:</strong> GRADO</p>
+  <p><strong>Facultad:</strong> FACULTAD</p>
+  <hr>
+  <p><strong>Teléfono móvil:</strong> TELÉFONO</p>
+  <p><strong>Correo electrónico:</strong> EMAIL</p>
+  <p><strong>Dirección / Colonia:</strong> DIRECCIÓN</p>
+  <p><strong>Código postal:</strong> CÓDIGO POSTAL</p>
+  <hr>
+  <p><strong>Ciudad:</strong> CIUDAD</p>
+  <p><strong>Centro de atención:</strong> CENTRO DE ATENCIÓN</p>
+  <p><strong>Tipo de trámite:</strong> TIPO DE TRÁMITE</p>
+  <p><strong>Fecha y hora de la cita:</strong> FECHA Y HORA DE LA CITA</p>
+  <p><strong>Lugar de atención:</strong> LUGAR DE ATENCIÓN</p>
+</div>
+<div class="mb-4 text-center">
+  <img src="../assets/qr_ejemplo.jpg" alt="Código QR Comprobante" 
+  <div class="small text-muted mt-2">Presenta este código QR para recoger tu tarjeta.</div>
+</div>
+<div class="d-flex justify-content-between mt-4">
+  <a href="confirmacion.html" class="btn btn-primary-light">Anterior</a>
+  <button class="btn btn-cta" disabled>Descargar comprobante PDF (proximamente)</button>
+</div>
+
+  <!--
+    <script src="../js/Descargapdf.js"></script>
+    Proximamente: generación de comprobante PDF y lógica de edición
+  -->
+</body>
+</html>

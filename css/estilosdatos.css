@@ -23,6 +23,7 @@ body {
   text-align: center;
 }
 
+/* Botones principales */
 .btn-cta {
   background: var(--cta);
   border-color: var(--cta);
@@ -30,12 +31,10 @@ body {
   font-weight: bold;
   border-radius: 8px;
 }
-
-.btn-cta:hover {
+.btn-cta:hover, .btn-cta:focus {
   background: var(--primary-light);
   border-color: var(--primary-light);
 }
-
 .btn-primary-light {
   background: var(--primary-light);
   border-color: var(--primary-light);
@@ -43,24 +42,12 @@ body {
   font-weight: bold;
   border-radius: 8px;
 }
-
-.btn-primary-light:hover {
+.btn-primary-light:hover, .btn-primary-light:focus {
   background: var(--primary);
   border-color: var(--primary);
 }
 
-.form-label {
-  color: var(--primary);
-  font-weight: 600;
-}
-
-.form-control:focus, .form-select:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 6px 0 var(--accent);
-}
-
-
-
+/* Barra de pasos */
 .steps-container {
   gap: 8px;
   align-items: center;
@@ -103,4 +90,26 @@ body {
   margin-top: 6px;
   text-align: center;
   width: max-content;
+}
+
+/* Imagen QR y centrado */
+.mb-4.text-center img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+/* Ajustes para responsive */
+@media (max-width: 600px) {
+  .form-card {
+    padding: 1rem;
+  }
+  .steps-container {
+    flex-direction: column;
+    gap: 2px;
+  }
+  .step-line {
+    width: 8px;
+    height: 24px;
+    margin: 2px 0;
+  }
 }
