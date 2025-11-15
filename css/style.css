@@ -16,6 +16,26 @@
       border-radius: 8px;
 
     }
+
+    .navbar {
+  background: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050; /* Asegura que quede siempre sobre otros elementos */
+  box-shadow: 0 2px 8px 0 rgba(27,50,95,0.07);
+}
+
+body {
+  background: var(--bg-soft);
+  padding-top: 100px; /* Ajusta valor según la altura real de tu navbar */
+}
+
+.navbar .nav-link, .navbar-brand {
+  color: #fff !important;
+}
+
     .btn-cta{ background: var(--cta); border-color: var(--cta); color:#fff; }
     .section-title{ color: var(--primary); }
     .location-card{

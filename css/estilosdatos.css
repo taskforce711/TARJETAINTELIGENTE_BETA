@@ -142,3 +142,25 @@ body {
     height: 22px;
   }
 }
+
+/* Tarjeta de advertencia especial para 'primera vez' */
+.alert-warning {
+  background: #ffe5dc !important;
+  border-left: 6px solid #f26c4f !important;
+  color: #af391a !important;
+}
+
+/* Para mayor claridad, puedes agregar margen e información a las alertas */
+.alert-info, .alert-warning {
+  margin-bottom: 1rem;
+  padding: 0.9rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+/* Ajuste opcional de responsividad para la tarjeta */
+@media (max-width: 600px) {
+  .form-card {
+    padding: 1rem !important;
+  }
+}

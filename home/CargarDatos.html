@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cargar Documentos — Solicitud UniPass</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/CargaDatos.css" rel="stylesheet">
+</head>
+<body>
+  <!-- NAVBAR y BARRA DE PASOS igual que en el paso 1, pero con el paso 2 activo -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a href="../home/index.html">
+        <img src="../assets/logo_Unipass.jpg" alt="UniPass Logo" class="image">
+      </a>
+    </div>
+  </nav>
+  <div class="steps-container d-flex justify-content-center my-5">
+    <div class="step-item">
+      <div class="step-circle">1</div>
+      <div class="step-label">Datos</div>
+    </div>
+    <div class="step-line"></div>
+    <div class="step-item">
+      <div class="step-circle active">2</div>
+      <div class="step-label">Documentos</div>
+    </div>
+    <div class="step-line"></div>
+    <div class="step-item">
+      <div class="step-circle">3</div>
+      <div class="step-label">Confirmación</div>
+    </div>
+  </div>
+  <div class="container my-4">
+    <div class="form-card mx-auto p-4">
+      <h2 class="title mb-3">Cargar Documentos</h2>
+      <div class="alert alert-info mb-4">
+        <strong>¡Importante!</strong> La cita será enviada a tu correo en un periodo de <b>12 a 24 horas</b>.<br>
+        Si no recibes la cita, comunícate con ISJU a: <a href="mailto:soporte@isju.gob.mx">soporte@isju.gob.mx</a><br>
+        Todos los documentos deben ser <b>legibles</b>, en formato <b>JPG o PDF</b>.
+      </div>
+      <h5 class="mb-3">Documentación Adjunta</h5>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card shadow-sm p-3 h-100">
+            <label class="form-label">Constancia de estudios vigente Digitalazada <span class="text-danger">*</span></label>
+            <input type="file" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm p-3 h-100">
+            <label class="form-label">CURP digitalizada <span class="text-danger">*</span></label>
+            <input type="file" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm p-3 h-100">
+            <label class="form-label">Identificación oficial <span class="text-danger">*</span></label>
+            <input type="file" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm p-3 h-100">
+            <label class="form-label">Credencial De la Escuela (solo si eres menor de edad)</label>
+            <input type="file" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm p-3 h-100">
+            <label class="form-label">Foto reciente del alumno </label>
+            <input type="file" class="form-control">
+          </div>
+        </div>
+      </div>
+      <hr class="my-4">
+      <!-- Consentimientos -->
+      <h5 class="mb-3">Consentimientos</h5>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="consent1" required>
+        <label class="form-check-label" for="consent1">
+          Confirmo que la información proporcionada es verídica
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="consent2" required>
+        <label class="form-check-label" for="consent2">
+          Acepto el uso de mis datos conforme a la <a href="../docs/avisoPrivacidad.pdf" target="_blank">política de privacidad</a>
+        </label>
+      </div>
+      <div class="form-check mb-4">
+        <input class="form-check-input" type="checkbox" id="consent3" required>
+        <label class="form-check-label" for="consent3">
+          Autorizo el uso de la tarjeta únicamente para fines escolares
+        </label>
+      </div>
+      <div class="d-flex justify-content-between">
+        <a href="LlenadoDatos.html" class="btn btn-primary-light">Atrás</a>
+        <a href="ConfirmacionCita.html" class="btn btn-cta">Continuar a Confirmación</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
