@@ -78,7 +78,7 @@ body {
   color: #fff;
 }
 .step-line {
-  flex: 1 0 14px;
+  flex: 0 0 180px;
   height: 3px;
   background: var(--accent);
   border-radius: 2px;
