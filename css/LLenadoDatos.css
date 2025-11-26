@@ -8,9 +8,21 @@
 
 /* Fondo y Navbar */
 body {
-  background: var(--bg-soft);
+  background-image: url("../assets/fondo.png");
   padding-top: 80px;
 }
+
+/* ICONO DEL PERFIL EN EL ENCABEZADO PERMANENTE O NAVBAR */
+.perfil-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid var(--primary-light);
+}
+
+
 .navbar {
   background: var(--primary);
   position: fixed;

@@ -36,6 +36,19 @@ body {
   color: #fff !important;
 }
 
+
+.perfil-icon {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff; /* Opcional, mejora el contraste si la imagen es fondo transparente */
+  border: 1.5px solid var(--primary-light); /* Opcional, para resaltar el círculo */
+}
+/* Si quieres el icono más pequeño, cambia los valores de width y height */
+
+
+
     .btn-cta{ background: var(--cta); border-color: var(--cta); color:#fff; }
     .section-title{ color: var(--primary); }
     .location-card{

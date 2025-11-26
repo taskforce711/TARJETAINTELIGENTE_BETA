@@ -6,10 +6,9 @@
   --cta: #f26c4f;
 }
 
-/* Fondo de la página */
 body {
-  background: var(--bg-soft);
-  padding-top: 80px; /* Ajusta según la altura real de tu navbar fija */
+  background-image: url("../assets/fondo.png");
+  padding-top: 80px;
 }
 
 /* Navbar permanente */
@@ -26,6 +25,18 @@ body {
   color: #fff !important;
 }
 .image { width: 130px; height: auto; border-radius: 8px; }
+
+/* ICONO DEL PERFIL EN EL ENCABEZADO PERMANENTE O NAVBAR */
+.perfil-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+  border: 1.5px solid var(--primary-light);
+}
+
+
 
 /* Tarjeta del formulario */
 .form-card {
