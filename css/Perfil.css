@@ -11,6 +11,22 @@ body {
   background-image: url("../assets/fondo.png");
   padding-top: 80px;
 }
+
+/* Botón CTA naranja reutilizable (igual que en index) */
+.btn-cta {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 12px;
+  width: 120px;
+}
+.btn-cta:hover,
+.btn-cta:focus {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+}
 /* Navbar */
 .navbar {
   background: var(--primary);
