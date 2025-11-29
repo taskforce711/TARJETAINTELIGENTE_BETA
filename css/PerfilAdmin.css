@@ -1,0 +1,95 @@
+:root {
+  --primary: #1b325f;
+  --primary-light: #3a89c9;
+  --bg-soft: #e9f2f9;
+  --accent: #9cc4e4;
+  --cta: #f26c4f;
+}
+
+/* Fondo naranja para toda la página */
+body {
+  background-image: url("../assets/fondoadmin.jpeg");
+  padding-top: 80px;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+}
+.image {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Botón CTA naranja (reutilizable) */
+.btn-cta {
+  background: #ff8a4a;
+  border-color: #ff8a4a;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+.btn-cta:hover,
+.btn-cta:focus {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+}
+
+/* Tarjeta blanca del admin */
+.admin-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 36px 0 rgba(0,0,0,0.18);
+  max-width: 780px;
+}
+.title {
+  color: var(--primary);
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.6rem;
+}
+hr {
+  opacity: 0.2;
+  border-color: var(--primary-light);
+}
+
+/* Avatar admin */
+.admin-icon-lg {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  border: 2.5px solid var(--primary-light);
+}
+
+/* Texto */
+p, .text-muted, li {
+  font-size: 1rem;
+}
+.text-muted {
+  color: #5f7fa6 !important;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .admin-card {
+    max-width: 98vw;
+    padding: 1rem;
+  }
+  .admin-icon-lg {
+    width: 56px;
+    height: 56px;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+}
