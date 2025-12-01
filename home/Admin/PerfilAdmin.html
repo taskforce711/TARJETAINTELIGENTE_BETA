@@ -21,57 +21,91 @@
     </div>
   </nav>
 
-  <div class="container my-5">
-    <div class="admin-card mx-auto p-4">
-      <div class="d-flex align-items-center gap-4 mb-4">
-        <img src="../../assets/user.png" alt="Administrador" class="admin-icon-lg">
-        <div>
-          <h2 class="title mb-0">Lic. Carlos Hernández Ramos</h2>
-          <span class="text-muted">Administrador UniPass — ISJU</span>
-        </div>
-      </div>
-      <hr>
-      <div class="row mb-4">
-        <div class="col-md-6">
-          <p><strong>Puesto:</strong> Coordinador de Control de Tarjeta Estudiantil</p>
-          <p><strong>Institución:</strong> Instituto Sinaloense de la Juventud (ISJU)</p>
-          <p><strong>Dependencia:</strong> Gobierno del Estado de Sinaloa</p>
-          <p><strong>Correo institucional:</strong> carlos.hernandez@isju.gob.mx</p>
-          <p><strong>Teléfono directo:</strong> (667) 715 0000 ext. 245</p>
-        </div>
-        <div class="col-md-6">
-          <p><strong>Usuario de sistema:</strong> admin_unipass_ch</p>
-          <p><strong>Rol:</strong> Administrador global</p>
-          <p><strong>Último inicio de sesión:</strong> 27/11/2025 — 08:42 a.m.</p>
-          <p><strong>Ubicación de trabajo:</strong> Culiacán, Sinaloa</p>
-          <p><strong>Módulo principal:</strong> ISJU Centro — Av. Teófilo Noris 565</p>
-        </div>
-      </div>
-      <hr>
-      <div class="row mb-4">
-        <div class="col-md-6">
-          <h6 class="mb-2">Actividad reciente</h6>
-          <ul class="mb-0">
-            <li>Revisión de 32 solicitudes de renovación.</li>
-            <li>Aprobación de 5 tarjetas nuevas.</li>
-            <li>Actualización de datos de 3 estudiantes.</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <h6 class="mb-2">Responsabilidades principales</h6>
-          <ul class="mb-0">
-            <li>Supervisión de trámites digitales UniPass.</li>
-            <li>Validación de documentación estudiantil.</li>
-            <li>Coordinación con módulos USE, ISJU y Palacio de Gobierno.</li>
-          </ul>
-        </div>
-      </div>
-      <hr>
-      <div class="d-flex justify-content-end gap-3">
-        <a href="../index.html" class="btn btn-outline-light text-dark bg-light">Volver al inicio</a>
-        <a href="../Admin/CrudAdministrador.html" class="btn btn-cta">Ir al panel administrativo</a>
-      </div>
+<!-- Navbar simple para admin -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a href="../index.html">
+      <img src="../../assets/logo_Unipass.jpg" alt="UniPass Logo" class="image">
+    </a>
+    <div class="ms-auto d-flex align-items-center" style="gap: 10px;">
+      <span class="text-white fw-semibold">Modo administrador</span>
+      <a class="btn btn-cta" href="../Registro_Usuario/login.html">Cerrar sesión</a>
     </div>
   </div>
+</nav>
+
+<div class="container my-5">
+  <div class="admin-card mx-auto p-4">
+    <div class="d-flex align-items-center gap-4 mb-4">
+      <img src="../../assets/user.png" alt="Administrador" class="admin-icon-lg">
+      <div>
+        <h2 class="title mb-0">Lic. Carlos Hernández Ramos</h2>
+        <span class="text-muted">Administrador UniPass — ISJU</span>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <p><strong>Puesto:</strong> Coordinador de Control de Tarjeta Estudiantil</p>
+        <p><strong>Institución:</strong> Instituto Sinaloense de la Juventud (ISJU)</p>
+        <p><strong>Dependencia:</strong> Gobierno del Estado de Sinaloa</p>
+        <p><strong>Correo institucional:</strong> carlos.hernandez@isju.gob.mx</p>
+        <p><strong>Teléfono directo:</strong> (667) 715 0000 ext. 245</p>
+      </div>
+      <div class="col-md-6">
+        <p><strong>Usuario de sistema:</strong> admin_unipass_ch</p>
+        <p><strong>Rol:</strong> Administrador global</p>
+        <p><strong>Último inicio de sesión:</strong> 27/11/2025 — 08:42 a.m.</p>
+        <p><strong>Ubicación de trabajo:</strong> Culiacán, Sinaloa</p>
+        <p><strong>Módulo principal:</strong> ISJU Centro — Av. Teófilo Noris 565</p>
+      </div>
+    </div>
+
+    <!-- ARREGLAR DESPUES 30/11/2025 -->
+    <!--
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h6 class="mb-2">Actividad reciente</h6>
+        <ul class="mb-0">
+          <li>Revisión de 32 solicitudes de renovación.</li>
+          <li>Aprobación de 5 tarjetas nuevas.</li>
+          <li>Actualización de datos de 3 estudiantes.</li>
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h6 class="mb-2">Responsabilidades principales</h6>
+        <ul class="mb-0">
+          <li>Supervisión de trámites digitales UniPass.</li>
+          <li>Validación de documentación estudiantil.</li>
+          <li>Coordinación con módulos USE, ISJU y Palacio de Gobierno.</li>
+        </ul>
+      </div>
+    </div>
+    -->
+
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h6 class="mb-2">Responsabilidades principales</h6>
+        <ul class="mb-0">
+          <li>Supervisión de trámites digitales UniPass.</li>
+          <li>Validación de documentación estudiantil.</li>
+          <li>Coordinación con módulos USE, ISJU y Palacio de Gobierno.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between gap-3">
+      <a href="../index.html" class="btn btn-secondary btn-volver">
+        Volver al inicio
+      </a>
+      <a href="../Admin/CrudAdministrador.html" class="btn btn-info btn-panel">
+        Ir al panel administrativo
+      </a>
+    </div>
+
+  </div>
+</div>
+
 </body>
 </html>

@@ -43,10 +43,24 @@ body {
   color: #fff;
 }
 
+.btn-volver {
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-panel {
+  font-weight: bold;
+  border-radius: 8px;
+  color: #fff;
+}
+
+
+
+
 /* Tarjeta blanca del admin */
 .admin-card {
-  background: #fff;
-  border-radius: 18px;
+  background: #ffffff;
+  border-radius: 30px;
   box-shadow: 0 0 36px 0 rgba(0,0,0,0.18);
   max-width: 780px;
 }
@@ -76,7 +90,7 @@ p, .text-muted, li {
   font-size: 1rem;
 }
 .text-muted {
-  color: #5f7fa6 !important;
+  color: #5289cc !important;
 }
 
 /* Responsive */
