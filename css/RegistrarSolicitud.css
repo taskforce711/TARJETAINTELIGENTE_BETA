@@ -1,0 +1,102 @@
+:root {
+  --primary: #1b325f;
+  --primary-light: #3a89c9;
+  --bg-soft: #e9f2f9;
+  --accent: #9cc4e4;
+  --cta: #f26c4f;
+}
+
+
+/* Fondo naranja para toda la página */
+body {
+  background-image: url("../assets/fondoadmin.jpeg");
+  padding-top: 80px;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(27, 50, 95, 0.96);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.image {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Botón CTA (Registrar, Cerrar sesión) */
+.btn-cta {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+.btn-cta:hover,
+.btn-cta:focus {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+}
+
+/* Botón secundario (Atrás) */
+.btn-secondary {
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Tarjeta central del formulario */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 0 28px 0 rgba(0, 0, 0, 0.28);
+  border: none;
+}
+.card-body {
+  background: #ffffff;
+}
+
+/* Títulos y texto */
+h2, h4, h5 {
+  color: var(--primary);
+}
+.text-muted {
+  color: #5f7fa6 !important;
+}
+
+/* Labels y campos */
+.form-label {
+  color: var(--primary);
+  font-weight: 600;
+}
+.form-control,
+.form-select,
+textarea.form-control {
+  border-radius: 8px;
+}
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 6px 0 var(--accent);
+}
+
+/* Separador */
+hr {
+  opacity: 0.18;
+  border-color: var(--primary-light);
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .card {
+    border-radius: 12px;
+  }
+  .navbar .container {
+    padding-inline: 1rem;
+  }
+}

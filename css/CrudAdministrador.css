@@ -1,0 +1,174 @@
+:root {
+  --primary: #1b325f;
+  --primary-light: #3a89c9;
+  --bg-soft: #e9f2f9;
+  --accent: #9cc4e4;
+  --cta: #f26c4f;
+}
+
+/* Fondo naranja para toda la página */
+body {
+  background-image: url("../assets/fondoadmin.jpeg");
+  padding-top: 80px;
+}
+
+/* Capa ligera para mejorar contraste */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* oscurece un poco el fondo */
+  z-index: -1;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(27, 50, 95, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+}
+.image {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Botón CTA (cerrar sesión, etc.) */
+.btn-cta {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+.btn-cta:hover,
+.btn-cta:focus {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+}
+
+/* Zona principal (contenedor) */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Tarjetas principales del CRUD */
+.card {
+  border-radius: 14px;
+  box-shadow: 0 0 26px 0 rgba(0, 0, 0, 0.22);
+  border: none;
+}
+.card-body {
+  background: #ffffff;
+}
+
+/* Título y textos */
+h2, h4, h5 {
+  color: var(--primary);
+}
+.text-muted {
+  color: #ffb95e !important;
+}
+
+/* Tabla */
+.table {
+  margin-bottom: 0;
+}
+.table thead th {
+  background: #f4f7fb;
+  color: var(--primary);
+  border-bottom: 2px solid var(--accent);
+}
+.table tbody tr:hover {
+  background: #f9fcff;
+}
+
+/* Badges de estado/documentos */
+.badge.bg-success {
+  background-color: #2bb673 !important;
+}
+.badge.bg-warning {
+  background-color: #ffce54 !important;
+  color: #654321 !important;
+}
+.badge.bg-secondary {
+  background-color: #b0b7c3 !important;
+}
+
+/* Botones de acciones en tabla */
+.btn-group .btn {
+  border-radius: 6px !important;
+}
+.btn-outline-primary {
+  border-color: var(--primary-light);
+  color: var(--primary-light);
+}
+.btn-outline-primary:hover {
+  background: var(--primary-light);
+  color: #fff;
+}
+.btn-outline-secondary:hover {
+  background: #6c757d;
+  color: #fff;
+}
+.btn-outline-success:hover {
+  background: #198754;
+  color: #fff;
+}
+.btn-outline-danger:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* Botones de filtros */
+.btn-primary {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  font-weight: 600;
+}
+.btn-primary:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline-secondary {
+  font-weight: 500;
+}
+
+/* Campos de formulario (filtros) */
+.form-label {
+  color: #ffffff;
+  font-weight: 600;
+}
+.card .form-label {
+  color: var(--primary);
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 6px 0 var(--accent);
+}
+
+/* Paginación */
+.pagination .page-link {
+  color: var(--primary);
+}
+.pagination .page-item.active .page-link {
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .card {
+    border-radius: 10px;
+  }
+  .navbar .container {
+    padding-inline: 1rem;
+  }
+}
