@@ -42,10 +42,10 @@ body {
   height: 34px;
   object-fit: cover;
   border-radius: 50%;
-  background: #fff; /* Opcional, mejora el contraste si la imagen es fondo transparente */
-  border: 1.5px solid var(--primary-light); /* Opcional, para resaltar el círculo */
+  background: #fff;
+  border: 1.5px solid var(--primary-light); 
 }
-/* Si quieres el icono más pequeño, cambia los valores de width y height */
+
 
 
 
@@ -75,5 +75,15 @@ body {
     .link-cta:hover{ text-decoration: underline; }
   
   
+.location-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 0 18px rgba(27, 50, 95, 0.12);
+  padding: 1.6rem 1.4rem;
+  /* TAMANO DE LAS TARJETAS */
+  max-width: 320px;   /* Subir y abajar */
+  min-height: 260px;  /* altura minima */
+  margin-inline: auto;
+}
 
     

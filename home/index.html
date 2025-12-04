@@ -94,69 +94,283 @@
 <!-- Centros -->
 <section id="centros" class="py-5">
   <div class="container">
-    <h2 class="section-title fw-bold mb-4">Centros de apoyo</h2>
-    <p>Si necesitas asistencia, acude a los módulos de atención en Culiacán, Mazatlán, Los Mochis, Guasave y Guamúchil. Los horarios y direcciones estarán disponibles en tu sesión.</p>
-    <div class="row">
+    <h2 class="section-title fw-bold mb-4">Centros De Apoyo Autorizados</h2>
+    <p class="mb-4">
+      Si tienes dudas sobre tu trámite UniPass o necesitas ayuda con tus documentos,
+      puedes acudir a cualquiera de los siguientes módulos de atención en el estado de Sinaloa.
+    </p>
+
+    <div class="row g-3">
+      <!-- CULIACÁN - USE -->
       <div class="location-card col-md-4 col-xl-4">
-        <h5>UNIDAD DE SERVICIOS ESTATALES (USE):</h3> 
-        <p>Blvd. Pedro infante s/n segundo piso desarrollo urbano tres ríos.
-        Horario de atención: </p>
-        <p>Lun-Vie: 8:00-15:00 hrs. Sab: 9:00-13:00 hrs.</p>
+        <h5 class="mb-2">Culiacán — Unidad de Servicios Estatales (USE)</h5>
+        <p class="mb-1">
+          Blvd. Pedro Infante s/n, segundo piso, Desarrollo Urbano Tres Ríos.
+        </p>
+        <p class="mb-0">
+          <strong>Horario de atención:</strong><br>
+          Lun–Vie: 8:00 – 15:00 hrs<br>
+          Sáb: 9:00 – 13:00 hrs
+        </p>
       </div>
+
+      <!-- CULIACÁN - ISJU -->
       <div class="location-card col-md-4 col-xl-4">
-        <h5>ISJU:</h3> 
-        <p>Av. Teófilo Noris 565, Primer Cuadro.
-        Horario de atención: </p>
-        <p>Lun-Vie: 9:00 - 15:00 hrs. Sab: 9:00-13:00 hrs.</p>
+        <h5 class="mb-2">Culiacán — Módulo ISJU Central</h5>
+        <p class="mb-1">
+          Av. Teófilo Noris 565, Zona Centro.
+        </p>
+        <p class="mb-0">
+          <strong>Horario de atención:</strong><br>
+          Lun–Vie: 9:00 – 15:00 hrs<br>
+          Sáb: 9:00 – 13:00 hrs
+        </p>
       </div>
+
+      <!-- CULIACÁN - Palacio de Gobierno -->
       <div class="location-card col-md-4 col-xl-4">
-        <h5>Palacio de Gobierno Módulo de atención ciudadana:</h3> 
-        <p>Horario de atención:</p>
-        <p> Lun-Vie: 8:00-15:00 hrs. Sab: 9:00 - 13:00 hrs.</p>
+        <h5 class="mb-2">Culiacán — Palacio de Gobierno (Módulo de atención ciudadana)</h5>
+        <p class="mb-1">
+          Palacio de Gobierno del Estado de Sinaloa, planta baja.
+        </p>
+        <p class="mb-0">
+          <strong>Horario de atención:</strong><br>
+          Lun–Vie: 8:00 – 15:00 hrs<br>
+          Sáb: 9:00 – 13:00 hrs
+        </p>
       </div>
     </div>
+
+    <div class="row g-3 mt-2">
+      <!-- MAZATLÁN -->
+      <div class="location-card col-md-4 col-xl-4">
+        <h5 class="mb-2">Mazatlán — Módulo ISJU Parque Lineal</h5>
+        <p class="mb-1">
+          Av. Libramiento #2 Pte. 464, Col. Villa Carey, C.P. 82132, sobre el Parque Lineal.
+        </p>
+        <p class="mb-0">
+          <strong>Horario de atención:</strong><br>
+          Lun–Vie: 9:00 – 14:30 hrs<br>
+          Sáb: 9:00 – 12:30 hrs
+        </p>
+      </div>
+
+      <!-- LOS MOCHIS / AHOME -->
+      <div class="location-card col-md-4 col-xl-4">
+        <h5 class="mb-2">Los Mochis (Ahome) — Vialidad y Transportes</h5>
+        <p class="mb-1">
+          Av. Belisario Domínguez 725, Col. La Bienestar, Los Mochis, Sinaloa.
+        </p>
+        <p class="mb-0">
+          <strong>Horario de atención:</strong><br>
+          Lun–Vie: 9:00 – 15:00 hrs
+        </p>
+      </div>
+
+      <!-- GUASAVE -->
+      <div class="location-card col-md-4 col-xl-4">
+        <h5 class="mb-2">Guasave — Unidad Administrativa</h5>
+        <p class="mb-1">
+          Blvd. Adolfo López Mateos s/n, Col. Del Bosque, Guasave, Sinaloa.
+        </p>
+        <p class="mb-0">
+          <strong>Horario de atención:</strong><br>
+          Lun–Vie: 9:00 – 15:00 hrs
+        </p>
+      </div>
+    </div>
+
     
   </div>
 </section>
+
 
 <!-- FAQ -->
 <section id="faq" class="py-5 bg-white">
   <div class="container">
     <h2 class="section-title fw-bold mb-4">Preguntas frecuentes</h2>
+
     <div class="accordion" id="faqAccordion">
+      <!-- 1 -->
       <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+        <h2 class="accordion-header" id="heading1">
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq1"
+            aria-expanded="true"
+            aria-controls="faq1">
             ¿Puedo hacer mi trámite sin iniciar sesión?
           </button>
         </h2>
-        <div id="faq1" class="accordion-collapse collapse show">
+        <div
+          id="faq1"
+          class="accordion-collapse collapse show"
+          aria-labelledby="heading1"
+          data-bs-parent="#faqAccordion">
           <div class="accordion-body">
             No. Todos los trámites se realizan en línea después de iniciar sesión en el portal UniPass.
           </div>
         </div>
       </div>
+
+      <!-- 2 -->
       <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+        <h2 class="accordion-header" id="heading2">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq2"
+            aria-expanded="false"
+            aria-controls="faq2">
             ¿Dónde subo mis documentos?
           </button>
         </h2>
-        <div id="faq2" class="accordion-collapse collapse">
+        <div
+          id="faq2"
+          class="accordion-collapse collapse"
+          aria-labelledby="heading2"
+          data-bs-parent="#faqAccordion">
           <div class="accordion-body">
             Una vez que inicies sesión, encontrarás la sección para subir tus documentos en formato digital.
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading3">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq3"
+            aria-expanded="false"
+            aria-controls="faq3">
+            ¿Qué formatos de archivo se aceptan para los documentos?
+          </button>
+        </h2>
+        <div
+          id="faq3"
+          class="accordion-collapse collapse"
+          aria-labelledby="heading3"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Los documentos deben ser legibles y se aceptan principalmente en formato JPG o PDF. Te recomendamos evitar fotos borrosas o recortadas.
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading4">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq4"
+            aria-expanded="false"
+            aria-controls="faq4">
+            ¿Cuánto tarda en generarse mi cita o mi código QR?
+          </button>
+        </h2>
+        <div
+          id="faq4"
+          class="accordion-collapse collapse"
+          aria-labelledby="heading4"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            El tiempo estimado de respuesta es de 12 a 24 horas hábiles. La confirmación se enviará al correo que registraste en UniPass.
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading5">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq5"
+            aria-expanded="false"
+            aria-controls="faq5">
+            ¿Qué hago si no recibo mi cita o confirmación?
+          </button>
+        </h2>
+        <div
+          id="faq5"
+          class="accordion-collapse collapse"
+          aria-labelledby="heading5"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Si pasó el tiempo estimado y no recibiste respuesta, revisa tu carpeta de spam y, si no aparece, comunícate al correo de soporte indicado en la plataforma.
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading6">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq6"
+            aria-expanded="false"
+            aria-controls="faq6">
+            ¿Puedo actualizar mis datos personales después de haberme registrado?
+          </button>
+        </h2>
+        <div
+          id="faq6"
+          class="accordion-collapse collapse"
+          aria-labelledby="heading6"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Sí. Desde tu perfil UniPass podrás editar datos como correo, teléfono y dirección. Ciertos datos sensibles pueden requerir validación adicional.
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading7">
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#faq7"
+            aria-expanded="false"
+            aria-controls="faq7">
+            ¿La tarjeta UniPass y el código QR se pueden usar en cualquier camión?
+          </button>
+        </h2>
+        <div
+          id="faq7"
+          class="accordion-collapse collapse"
+          aria-labelledby="heading7"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            La tarjeta y el código QR aplican únicamente en las rutas y unidades autorizadas por el programa UniPass. En la plataforma podrás consultar información actualizada sobre su cobertura.
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 
 <!-- Footer -->
 <footer class="footer py-4 text-center">
   <div class="container">
     <p>© 2025 UniPass — Todos los derechos reservados</p>
     <a href="#" class="link-light">Aviso de privacidad</a>
+    <a href="../home/Footer/SobreNosotros.html">Sobre Nosotros</a>
   </div>
 </footer>
 

@@ -83,7 +83,7 @@ body {
   color: #fff;
 }
 .step-line {
-  flex: 0 0 400px; /* <-- Haz la rayita más pequeña ajustando aquí */
+  flex: 0 0 400px; /* <-- hace la raya más pequeña de los pasos */
   height: 3px;
   background: var(--accent);
   border-radius: 2px;
