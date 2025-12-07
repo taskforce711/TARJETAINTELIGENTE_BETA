@@ -1,0 +1,164 @@
+:root {
+  --primary: #1b325f;
+  --primary-light: #3a89c9;
+  --bg-soft: #e9f2f9;
+  --accent: #9cc4e4;
+  --cta: #f26c4f;
+}
+
+/* Fondo general y tipografía base */
+body {
+  background: var(--bg-soft);
+  padding-top: 80px; /* altura navbar fija */
+}
+
+/* NAVBAR (mismo estándar que index) */
+.navbar {
+  background: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 8px 0 rgba(27, 50, 95, 0.07);
+}
+
+.navbar .nav-link,
+.navbar-brand {
+  color: #fff !important;
+}
+
+.navbar .nav-link.active {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Logo */
+.image {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Botón CTA navbar */
+.btn-cta {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.btn-cta:hover,
+.btn-cta:focus {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+}
+
+/* CONTENIDO SOBRE NOSOTROS */
+.sobre-main {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+/* Hero / intro */
+.sobre-title {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.sobre-hero .lead {
+  font-size: 1.05rem;
+}
+
+/* Tarjeta resumen lateral */
+.sobre-highlight-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 32px 0 rgba(27, 50, 95, 0.08);
+  padding: 1.5rem 1.75rem;
+}
+
+.sobre-highlight-card h2 {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.sobre-highlight-card ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  font-size: 0.97rem;
+}
+
+/* Títulos de sección */
+.sobre-section-title {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Tarjetas generales */
+.sobre-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 24px 0 rgba(27, 50, 95, 0.06);
+  padding: 1.5rem 1.6rem;
+  font-size: 0.98rem;
+}
+
+/* Tarjetas pequeñas / info lateral */
+.sobre-mini-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 24px 0 rgba(27, 50, 95, 0.06);
+  padding: 1.5rem 1.6rem;
+  font-size: 0.95rem;
+}
+
+.sobre-mini-card ul {
+  padding-left: 1.2rem;
+}
+
+/* Listas de alcance y problema */
+.sobre-main ul {
+  font-size: 0.97rem;
+}
+
+/* FOOTER (mismo estilo institucional) */
+.footer {
+  background: var(--primary);
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  body {
+    padding-top: 72px;
+  }
+
+  .sobre-highlight-card,
+  .sobre-card,
+  .sobre-mini-card {
+    padding: 1.25rem 1.3rem;
+  }
+
+  .sobre-title {
+    font-size: 1.5rem;
+  }
+}

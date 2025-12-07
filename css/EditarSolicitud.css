@@ -1,0 +1,134 @@
+:root {
+  --primary: #1b325f;
+  --primary-light: #3a89c9;
+  --bg-soft: #e9f2f9;
+  --accent: #9cc4e4;
+  --cta: #f26c4f;
+}
+
+/* Fondo general */
+body {
+  background: var(--bg-soft);
+  padding-top: 80px;
+}
+
+/* Navbar admin */
+.navbar {
+  background: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  box-shadow: 0 2px 8px rgba(27, 50, 95, 0.07);
+}
+
+.image {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.navbar .btn-cta {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+.navbar .btn-cta:hover,
+.navbar .btn-cta:focus {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+}
+
+/* Tarjeta principal */
+.card {
+  border-radius: 16px;
+  box-shadow: 0 0 32px 0 rgba(27, 50, 95, 0.08);
+  border: none;
+}
+
+.card-body {
+  padding: 1.8rem 2rem;
+}
+
+.h4 {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* Texto */
+.text-muted {
+  color: var(--primary-light) !important;
+}
+
+/* Formularios */
+.form-label {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.form-control,
+.form-select,
+textarea.form-control {
+  border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea.form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 6px 0 var(--accent);
+}
+
+/* Botones principales */
+.btn-cta {
+  background: var(--cta);
+  border-color: var(--cta);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+}
+.btn-cta:hover,
+.btn-cta:focus {
+  background: var(--primary-light);
+  border-color: var(--primary-light);
+  color: #fff;
+}
+
+.btn-secondary {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* Alertas */
+.alert-info,
+.alert-warning {
+  border-radius: 10px;
+  font-size: 0.95rem;
+}
+
+.alert-info {
+  background: #e9f2f9;
+  color: var(--primary);
+  border-left: 5px solid var(--primary-light);
+}
+
+.alert-warning {
+  background: #ffe5dc;
+  border-left: 5px solid var(--cta);
+  color: #af391a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 1.3rem 1.1rem;
+  }
+
+  .container {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+}

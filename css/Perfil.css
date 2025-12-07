@@ -131,3 +131,38 @@ p, .text-muted {
     padding-right: 2vw;
   }
 }
+
+.qr-section {
+  display: flex;
+  justify-content: center;
+}
+
+.qr-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 0 24px 0 rgba(27, 50, 95, 0.10);
+  max-width: 420px;
+  width: 100%;
+}
+
+.qr-img {
+  max-width: 220px;
+  max-height: 220px;
+  border-radius: 12px;
+  border: 2px solid var(--primary-light);
+  background: #fff;
+  padding: 8px;
+}
+
+.descargar-icon {
+  width: 20px;    /* ancho del icono */
+  height: 20px;   /* alto del icono */
+  flex-shrink: 0; /* evita que se deforme en flex */
+}
+
+.descargar-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
