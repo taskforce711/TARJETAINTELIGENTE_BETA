@@ -19,16 +19,22 @@ function manejarCrudSolicitudes() {
     const textoBoton = boton.innerText.trim();
 
     if (textoBoton === "Eliminar") {
+      e.preventDefault();
       manejarEliminarFila(fila);
     } else if (textoBoton === "Cambiar estado") {
+      e.preventDefault();
       manejarCambiarEstado(fila);
-    } else if (textoBoton === "Editar") {
-      manejarEditarFila(fila);
     } else if (textoBoton === "Ver") {
+      e.preventDefault();
       manejarVerFila(fila);
+    } else if (textoBoton === "Editar") {
+      // Antes de ir a EditarSolicitud, guardamos la info de la fila
+      guardarSolicitudEnEdicion(fila);
+      // No hacemos preventDefault: dejamos que el enlace navegue a EditarSolicitud.html
     }
   });
 }
+
 
 function manejarEliminarFila(fila) {
   const nombreAlumno = fila.cells[0]?.innerText || "este registro";
@@ -37,7 +43,7 @@ function manejarEliminarFila(fila) {
 
   const cuerpo = fila.parentNode;
   cuerpo.removeChild(fila);
-  alert("La solicitud ha sido eliminada de la tabla (solo a nivel visual).");
+  alert("La solicitud ha sido eliminada de la tabla.");
 }
 
 function manejarCambiarEstado(fila) {
@@ -111,4 +117,58 @@ function manejarVerFila(fila) {
     `Fecha de solicitud: ${fecha}\n` +
     `Ciudad / Módulo: ${modulo}`
   );
+}
+
+function guardarSolicitudEnEdicion(fila) {
+  const alumno = fila.cells[0]?.innerText || "";
+  const curp = fila.cells[1]?.innerText || "";
+  const tipo = fila.cells[2]?.innerText || "";
+  const estadoTexto = fila.cells[3]?.innerText.trim() || "";
+  const fecha = fila.cells[4]?.innerText || "";
+  const modulo = fila.cells[5]?.innerText || "";
+
+  // Documentos según badges (si no tienes todas, puedes ajustar)
+  const celdaDocs = fila.cells[6];
+  const badges = celdaDocs ? celdaDocs.querySelectorAll("span.badge") : [];
+  const docs = {
+    constancia: "pendiente",
+    identificacion: "pendiente",
+    foto: "pendiente",
+    curp: "pendiente",
+    acta: "pendiente"
+  };
+
+  badges.forEach((badge) => {
+    const texto = badge.innerText.toLowerCase();
+    const aprobado = badge.classList.contains("bg-success");
+
+    if (texto.includes("constancia")) {
+      docs.constancia = aprobado ? "aprobado" : "rechazado";
+    } else if (texto.includes("identificación")) {
+      docs.identificacion = aprobado ? "aprobado" : "rechazado";
+    } else if (texto.includes("foto")) {
+      docs.foto = aprobado ? "aprobado" : "rechazado";
+    } else if (texto.includes("curp")) {
+      docs.curp = aprobado ? "aprobado" : "rechazado";
+    } else if (texto.includes("acta")) {
+      docs.acta = aprobado ? "aprobado" : "rechazado";
+    }
+  });
+
+  const solicitud = {
+    alumno,
+    curp,
+    tipoTramite: tipo,
+    estadoTexto,
+    fechaSolicitud: fecha,
+    modulo,
+    documentos: docs
+    // Aquí podrías agregar más datos si luego los tienes en columnas ocultas
+  };
+
+  try {
+    localStorage.setItem("unipass_solicitud_en_edicion", JSON.stringify(solicitud));
+  } catch (err) {
+    console.log("No se pudo guardar en localStorage", err);
+  }
 }

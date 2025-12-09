@@ -21,190 +21,190 @@
     </div>
   </nav>
 
-  <div class="container my-5">
-    <div class="card mx-auto" style="max-width: 900px;">
-      <div class="card-body">
-        <h2 class="h4 mb-1">Editar solicitud de alumno</h2>
-        <p class="text-muted mb-4">
-          Actualiza los datos de la solicitud seleccionada. Los cambios se verán reflejados en el panel de gestión.
-        </p>
+ <div class="container my-5">
+  <div class="card mx-auto" style="max-width: 900px;">
+    <div class="card-body">
+      <h2 class="h4 mb-1">Editar solicitud de alumno</h2>
+      <p class="text-muted mb-4">
+        Actualiza los datos de la solicitud seleccionada. Los cambios se verán reflejados en el panel de gestión.
+      </p>
 
-        <!-- Resumen rápido arriba -->
-        <div class="alert alert-info small mb-4">
-          <strong>Solicitud seleccionada:</strong> Juan Pérez López — CURP: PELJ010101HSLRNN01 — Tipo: Nueva — Estado actual: Pendiente revisión.
+      <!-- Resumen rápido arriba (vacío, para usar o no con JS) -->
+      <div class="alert alert-info small mb-4" id="resumenSolicitud"></div>
+
+      <form>
+        <div class="row g-3">
+          <!-- Datos del alumno -->
+          <div class="col-12">
+            <h5 class="mb-2">Datos del alumno</h5>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Nombre(s)</label>
+            <input type="text" id="nombre" class="form-control" value="">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Apellidos</label>
+            <input type="text" id="apellidos" class="form-control" value="">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">CURP</label>
+            <input type="text" id="curp" class="form-control" value="">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Nivel educativo</label>
+            <select id="nivel" class="form-select">
+              <option selected disabled>Selecciona nivel</option>
+              <option>Primaria</option>
+              <option>Secundaria</option>
+              <option>Preparatoria / Media Superior</option>
+              <option>Universidad / Superior</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Institución</label>
+            <input type="text" id="institucion" class="form-control" value="">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Ciudad</label>
+            <input type="text" id="ciudad" class="form-control" value="">
+          </div>
+
+          <!-- Datos del trámite -->
+          <div class="col-12 mt-3">
+            <h5 class="mb-2">Datos del trámite</h5>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Tipo de trámite</label>
+            <select id="tipoTramite" class="form-select">
+              <option selected disabled>Selecciona tipo</option>
+              <option>Nueva</option>
+              <option>Renovación</option>
+              <option>Reposición</option>
+              <option>Reactivación</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Estado del trámite</label>
+            <select id="estadoTramite" class="form-select">
+              <option selected disabled>Selecciona estado</option>
+              <option>Pendiente revisión</option>
+              <option>Aprobado</option>
+              <option>Rechazado</option>
+              <option>En espera de documentos</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Fecha de solicitud</label>
+            <input type="date" id="fechaSolicitud" class="form-control" value="">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Ciudad / Módulo</label>
+            <select id="modulo" class="form-select">
+              <option disabled selected>Selecciona un módulo</option>
+              <option>Culiacán — ISJU Centro</option>
+              <option>Culiacán — USE</option>
+              <option>Culiacán — PALACIO DE GOBIERNO</option>
+              <option>Mazatlán — ISJU MAZATLAN</option>
+              <option>Los Mochis — VIALIDAD Y TRANSPORTES</option>
+              <option>Guasave — UNIDAD ADMINISTRATIVA ADOLFO LOPEZ MATEOS</option>
+              <option>Salvador Alvarado — Guamuchil</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Observaciones internas</label>
+            <textarea id="observaciones" class="form-control" rows="2"
+              placeholder="Notas para uso interno del administrador"></textarea>
+          </div>
         </div>
 
-        <form>
-          <div class="row g-3">
-            <!-- Datos del alumno -->
-            <div class="col-12">
-              <h5 class="mb-2">Datos del alumno</h5>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Nombre(s)</label>
-              <input type="text" id="nombre" class="form-control" value="Juan">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Apellidos</label>
-              <input type="text" id="apellidos" class="form-control" value="Pérez López">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">CURP</label>
-              <input type="text" id="curp" class="form-control" value="PELJ010101HSLRNN01">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Nivel educativo</label>
-              <select id="nivel" class="form-select">
-                <option>Primaria</option>
-                <option>Secundaria</option>
-                <option>Preparatoria / Media Superior</option>
-                <option selected>Universidad / Superior</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Institución</label>
-              <input type="text" id="institucion" class="form-control" value="Universidad Autónoma de Sinaloa">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Ciudad</label>
-              <input type="text" id="ciudad" class="form-control" value="Culiacán">
-            </div>
+        <!-- Revisión de documentos -->
+        <div class="col-12 mt-4">
+          <h5 class="mb-2">Documentos del alumno</h5>
+          <p class="text-muted small mb-3">
+            Marca el estado de revisión de cada documento. Aprobado se mostrará en verde, Rechazado/Pendiente en gris.
+          </p>
+        </div>
 
-            <!-- Datos del trámite -->
-            <div class="col-12 mt-3">
-              <h5 class="mb-2">Datos del trámite</h5>
-            </div>
-            <div class="col-md-4">
-              <label class="form-label">Tipo de trámite</label>
-              <select id="tipoTramite" class="form-select">
-                <option selected>Nueva</option>
-                <option>Renovación</option>
-                <option>Reposición</option>
-                <option>Reactivación</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label class="form-label">Estado del trámite</label>
-              <select id="estadoTramite" class="form-select">
-                <option>Pendiente revisión</option>
-                <option selected>Aprobado</option>
-                <option>Rechazado</option>
-                <option>En espera de documentos</option>
-              </select>
-            </div>
-            <div class="col-md-4">
-              <label class="form-label">Fecha de solicitud</label>
-              <input type="date" id="fechaSolicitud" class="form-control" value="2025-11-25">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Ciudad / Módulo</label>
-              <select id="modulo" class="form-select">
-                <option disabled>Selecciona un módulo</option>
-                <option selected>Culiacán — ISJU Centro</option>
-                <option>Culiacán — USE</option>
-                <option>Culiacán — PALACIO DE GOBIERNO</option>
-                <option>Mazatlán — ISJU MAZATLAN</option>
-                <option>Los Mochis — VIALIDAD Y TRANSPORTES</option>
-                <option>Guasave — UNIDAD ADMINISTRATIVA ADOLFO LOPEZ MATEOS</option>
-                <option>Salvador Alvarado — Guamuchil</option>
-              </select>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label">Observaciones internas</label>
-              <textarea id="observaciones" class="form-control" rows="2"
-                placeholder="Notas para uso interno del administrador">Alumno con documentos completos, revisar constancia actualizada.</textarea>
-            </div>
+        <div class="col-md-6">
+          <label class="form-label d-block">Constancia de estudios</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docConstancia" id="docConstanciaOk" value="aprobado">
+            <label class="form-check-label" for="docConstanciaOk">Aprobado</label>
           </div>
-
-                            <!-- Revisión de documentos -->
-          <div class="col-12 mt-4">
-            <h5 class="mb-2">Documentos del alumno</h5>
-            <p class="text-muted small mb-3">
-              Marca el estado de revisión de cada documento. Aprobado se mostrará en verde, Rechazado/Pendiente en gris.
-            </p>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docConstancia" id="docConstanciaNo" value="rechazado">
+            <label class="form-check-label" for="docConstanciaNo">Rechazado / Pendiente</label>
           </div>
+        </div>
 
-          <div class="col-md-6">
-            <label class="form-label d-block">Constancia de estudios</label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docConstancia" id="docConstanciaOk" value="aprobado">
-              <label class="form-check-label" for="docConstanciaOk">Aprobado</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docConstancia" id="docConstanciaNo" value="rechazado">
-              <label class="form-check-label" for="docConstanciaNo">Rechazado / Pendiente</label>
-            </div>
+        <div class="col-md-6">
+          <label class="form-label d-block">Identificación oficial</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docIdentificacion" id="docIdentificacionOk" value="aprobado">
+            <label class="form-check-label" for="docIdentificacionOk">Aprobado</label>
           </div>
-
-          <div class="col-md-6">
-            <label class="form-label d-block">Identificación oficial</label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docIdentificacion" id="docIdentificacionOk" value="aprobado">
-              <label class="form-check-label" for="docIdentificacionOk">Aprobado</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docIdentificacion" id="docIdentificacionNo" value="rechazado">
-              <label class="form-check-label" for="docIdentificacionNo">Rechazado / Pendiente</label>
-            </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docIdentificacion" id="docIdentificacionNo" value="rechazado">
+            <label class="form-check-label" for="docIdentificacionNo">Rechazado / Pendiente</label>
           </div>
+        </div>
 
-          <div class="col-md-6">
-            <label class="form-label d-block">Foto reciente</label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docFoto" id="docFotoOk" value="aprobado">
-              <label class="form-check-label" for="docFotoOk">Aprobado</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docFoto" id="docFotoNo" value="rechazado">
-              <label class="form-check-label" for="docFotoNo">Rechazado / Pendiente</label>
-            </div>
+        <div class="col-md-6">
+          <label class="form-label d-block">Foto reciente</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docFoto" id="docFotoOk" value="aprobado">
+            <label class="form-check-label" for="docFotoOk">Aprobado</label>
           </div>
-
-          <div class="col-md-6">
-            <label class="form-label d-block">CURP digitalizada</label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docCurp" id="docCurpOk" value="aprobado">
-              <label class="form-check-label" for="docCurpOk">Aprobado</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docCurp" id="docCurpNo" value="rechazado">
-              <label class="form-check-label" for="docCurpNo">Rechazado / Pendiente</label>
-            </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docFoto" id="docFotoNo" value="rechazado">
+            <label class="form-check-label" for="docFotoNo">Rechazado / Pendiente</label>
           </div>
+        </div>
 
-          <div class="col-md-6">
-            <label class="form-label d-block">Acta de nacimiento</label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docActa" id="docActaOk" value="aprobado">
-              <label class="form-check-label" for="docActaOk">Aprobado</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="docActa" id="docActaNo" value="rechazado">
-              <label class="form-check-label" for="docActaNo">Rechazado / Pendiente</label>
-            </div>
+        <div class="col-md-6">
+          <label class="form-label d-block">CURP digitalizada</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docCurp" id="docCurpOk" value="aprobado">
+            <label class="form-check-label" for="docCurpOk">Aprobado</label>
           </div>
-
-          <hr class="my-4">
-
-          <!-- Aviso -->
-          <div class="alert alert-warning small mb-3">
-            Los cambios realizados modificarán esta solicitud solo dentro del panel administrativo.
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docCurp" id="docCurpNo" value="rechazado">
+            <label class="form-check-label" for="docCurpNo">Rechazado / Pendiente</label>
           </div>
+        </div>
 
-          <div class="d-flex justify-content-between">
-            <!-- Botón Volver al CRUD -->
-            <a href="../Admin/CrudAdministrador.html" class="btn btn-secondary">
-              Cancelar / Volver
-            </a>
-            <!-- Botón Guardar cambios -->
-            <button type="submit" class="btn btn-cta">
-              Guardar cambios
-            </button>
+        <div class="col-md-6">
+          <label class="form-label d-block">Acta de nacimiento</label>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docActa" id="docActaOk" value="aprobado">
+            <label class="form-check-label" for="docActaOk">Aprobado</label>
           </div>
-        </form>
-      </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="docActa" id="docActaNo" value="rechazado">
+            <label class="form-check-label" for="docActaNo">Rechazado / Pendiente</label>
+          </div>
+        </div>
+
+        <hr class="my-4">
+
+        <!-- Aviso -->
+        <div class="alert alert-warning small mb-3">
+          Los cambios realizados modificarán esta solicitud solo dentro del panel administrativo.
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <a href="../Admin/CrudAdministrador.html" class="btn btn-secondary">
+            Cancelar / Volver
+          </a>
+          <button type="submit" class="btn btn-cta">
+            Guardar cambios
+          </button>
+        </div>
+      </form>
     </div>
   </div>
+</div>
+
 
   <script src="../../js/EditarSolicitud.js"></script>
 </body>

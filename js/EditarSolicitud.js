@@ -21,6 +21,9 @@ function manejarEditarSolicitud() {
   const modulo = document.getElementById("modulo");
   const observaciones = document.getElementById("observaciones");
 
+  // Cargar datos que vienen del CRUD
+  cargarDatosDesdeCrud();
+
   function marcarError(input, tieneError) {
     if (!input) return;
     if (tieneError) {
@@ -84,8 +87,8 @@ function manejarEditarSolicitud() {
     if (hayError) {
       alert(
         "Revisa los campos marcados en rojo.\n\n" +
-        "Nombre, apellidos, institución, ciudad, observaciones y la fecha son obligatorios.\n" +
-        "La CURP puede ser inventada, pero no debe quedar vacía."
+        "Ingresa todos los datos por favor.\n"
+        
       );
       return;
     }
@@ -115,12 +118,75 @@ function manejarEditarSolicitud() {
 
     const confirmar = confirm(
       "¿Deseas guardar los cambios de esta solicitud?\n" +
-      "Estos cambios se verán reflejados en el panel administrativo (modo demo)."
+      "Estos cambios se verán reflejados en el panel administrativo."
     );
 
     if (!confirmar) return;
 
-    alert("Los cambios de la solicitud se han actualizado (modo demo). En el futuro, también se actualizarán los colores en el CRUD.");
-    console.log("Solicitud editada (demo):", solicitudEditada);
+    alert("Los cambios de la solicitud se han actualizado.");
+    console.log("Solicitud editada.", solicitudEditada);
   });
+}
+
+function cargarDatosDesdeCrud() {
+  let datos;
+  try {
+    const raw = localStorage.getItem("unipass_solicitud_en_edicion");
+    if (!raw) return;
+    datos = JSON.parse(raw);
+  } catch (err) {
+    console.log("No se pudo leer la solicitud en edición", err);
+    return;
+  }
+
+  if (!datos) return;
+
+  // Resumen rápido
+  const alertaResumen = document.querySelector(".alert.alert-info.small");
+  if (alertaResumen) {
+    alertaResumen.innerHTML =
+      `<strong>Solicitud seleccionada:</strong> ${datos.alumno || "Alumno"} — CURP: ${datos.curp || ""} — ` +
+      `Tipo: ${datos.tipoTramite || ""} — Estado actual: ${datos.estadoTexto || ""}.`;
+  }
+
+  // Campos del trámite (si hay datos)
+  if (tipoTramite && datos.tipoTramite) {
+    tipoTramite.value = datos.tipoTramite;
+  }
+  if (estadoTramite && datos.estadoTexto) {
+    // Intentar seleccionar el estado que coincide con el texto
+    for (let i = 0; i < estadoTramite.options.length; i++) {
+      if (estadoTramite.options[i].text.trim() === datos.estadoTexto.trim()) {
+        estadoTramite.selectedIndex = i;
+        break;
+      }
+    }
+  }
+  if (fechaSolicitud && datos.fechaSolicitud) {
+    // Si en el CRUD la fecha está como 25/11/2025 necesitarías convertirla a 2025-11-25.
+    // Por ahora solo la asignamos si ya viene en formato yyyy-mm-dd
+    if (datos.fechaSolicitud.includes("-")) {
+      fechaSolicitud.value = datos.fechaSolicitud;
+    }
+  }
+  if (modulo && datos.modulo) {
+    modulo.value = datos.modulo;
+  }
+
+  // Documentos: marcar radios según lo guardado
+  const docs = datos.documentos || {};
+
+  function marcarRadioDoc(nombreGrupo, estado) {
+    const valor = estado === "aprobado" ? "aprobado" : "rechazado";
+    const radio = document.querySelector(`input[name="${nombreGrupo}"][value="${valor}"]`);
+    if (radio) {
+      radio.checked = true;
+    }
+  }
+
+  marcarRadioDoc("docConstancia", docs.constancia);
+  marcarRadioDoc("docIdentificacion", docs.identificacion);
+  marcarRadioDoc("docFoto", docs.foto);
+  marcarRadioDoc("docCurp", docs.curp);
+  marcarRadioDoc("docActa", docs.acta);
 }
