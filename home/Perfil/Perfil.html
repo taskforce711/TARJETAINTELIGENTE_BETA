@@ -117,8 +117,8 @@
       <p class="text-muted mb-2">
         Si tus datos son correctos, puedes continuar directamente a la carga de documentos sin volver a llenar tu información.
       </p>
-      <a href="../CargarDatosPerfil.html" class="btn btn-info">Realizar renovación</a>
-      <a href="#" class="btn btn-cta ms-2">Solicitar nueva tarjeta</a>
+      <button id="renovacion" class="btn btn-cta">Realizar renovación</button>
+      <button id="nuevaTarjeta" class="btn btn-cta ms-2">Solicitar nueva tarjeta</button>
     </div>
 
     <hr>
@@ -138,36 +138,25 @@
 
     <div class="qr-section mb-3 text-center">
       <img src="../../assets/qr_ejemplo2.png" alt="Código QR UniPass" class="qr-img">
-      <div class="small text-muted mt-2">
-        Presenta este código QR para usar tu beneficio o recoger tu tarjeta.
-      </div>
+    </div>
+    <div class="small text-muted mb-3">
+      Presenta este código QR para usar tu beneficio o recoger tu tarjeta.
     </div>
 
-    <button class="btn btn-cta d-flex align-items-center gap-2 mb-2" disabled>
+    <button class="btn btn-cta gap-2 mb-1" disabled>
+      <img src="../../assets/DescargarIcon.png" alt="Descargar" class="descargar-icon">
+      Descargar comprobante PDF
+    </button>
+
+    <button class="btn btn-cta gap-2 mb-2" disabled>
       <img src="../../assets/DescargarIcon.png" alt="Descargar" class="descargar-icon">
       Descargar QR
     </button>
 
-    <button class="btn btn-cta d-flex align-items-center gap-2 mb-1" disabled>
-      <img src="../../assets/DescargarIcon.png" alt="Descargar" class="descargar-icon">
-      Descargar comprobante PDF
-    </button>
   </div>
 </div>
 
-<!-- Bootstrap JS (opcional) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../js/Perfil.js"></script>
 
-<script>
-  // Mostrar/ocultar la sección del QR dentro del perfil
-  window.addEventListener("load", function () {
-    const btnVerQr = document.getElementById("btnVerQr");
-    const qrSection = document.getElementById("qrSection");
-
-    if (!btnVerQr || !qrSection) return;
-
-    btnVerQr.addEventListener("click", function () {
-      qrSection.classList.toggle("d-none");
-    });
-  });
-</script>
+</body>
+</html>

@@ -6,9 +6,9 @@
   --cta: #f26c4f;
 }
 
-/* Fondo general */
+/* Fondo naranja para toda la página relacionada al administrador */
 body {
-  background: var(--bg-soft);
+  background-image: url("../assets/fondoadmin.jpeg");
   padding-top: 80px;
 }
 

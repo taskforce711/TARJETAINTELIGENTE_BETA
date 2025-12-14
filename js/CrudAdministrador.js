@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
   manejarCrudSolicitudes();
 });
 
+//Seleccionar el boton pulsado de los botones ver, editar, cambiar estado, eliminar y realizar la acciones pertinentes
 function manejarCrudSolicitudes() {
   const tabla = document.querySelector(".table.table-hover tbody");
   if (!tabla) return;
@@ -35,7 +36,7 @@ function manejarCrudSolicitudes() {
   });
 }
 
-
+//Eliminar registro
 function manejarEliminarFila(fila) {
   const nombreAlumno = fila.cells[0]?.innerText || "este registro";
   const deseaEliminar = confirm(`¿Seguro que deseas eliminar la solicitud de ${nombreAlumno}?`);
@@ -46,6 +47,7 @@ function manejarEliminarFila(fila) {
   alert("La solicitud ha sido eliminada de la tabla.");
 }
 
+//Cambiar el estado de la solicitud
 function manejarCambiarEstado(fila) {
   const celdaEstado = fila.cells[3];
   if (!celdaEstado) return;
